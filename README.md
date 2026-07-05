@@ -17,18 +17,10 @@
 <br/>
 <br/>
 
-<!-- Shields & Badges (replace `your-username` and repo name) -->
-
 
 
 <br/>
 
-<!-- Social / Repo Stats (update with real repo once public) -->
-
-[
-[
-[
-[
 
 </div>
 
