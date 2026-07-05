@@ -11,7 +11,7 @@
 <!-- Core Identity -->
 
 <a href="#-product-overview">
-  <img src="assets/hero-banner.png" alt="SpeakEasy Hero Banner" width="800" />
+  <img src="assets/hero-banner.png" alt="SpeakEasy Hero Banner" width="1000" />
 </a>
 
 <br/>
@@ -20,13 +20,6 @@
 <!-- Shields & Badges (replace `your-username` and repo name) -->
 
 
-
-
-
-
-
-[^1]
-[^1]
 
 <br/>
 
