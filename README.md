@@ -11,7 +11,7 @@
 <!-- Core Identity -->
 
 <a href="#-product-overview">
-  <img src="./.github/assets/hero-banner.png" alt="SpeakEasy Hero Banner" width="800" />
+  <img src="assets/hero-banner.png" alt="SpeakEasy Hero Banner" width="800" />
 </a>
 
 <br/>
