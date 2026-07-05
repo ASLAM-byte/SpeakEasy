@@ -200,36 +200,9 @@ flowchart TD
 
 ### Conceptual system architecture
 
-```mermaid
-flowchart LR
-    subgraph Client
-        U[User (Browser)]
-        FE[Next.js + React UI]
-        STATE[Zustand Store]
-        LS[(localStorage)]
-    end
-
-    subgraph Services
-        DATA[Static Data Files<br/>(topics, vocab, questions)]
-        ANALYSIS[Speech Analysis Module]
-        CONFETTI[Canvas Confetti]
-    end
-
-    U --> FE
-    FE --> STATE
-    STATE --> LS
-    FE --> DATA
-    FE --> ANALYSIS
-    FE --> CONFETTI
-
-    subgraph Deployment
-        CF[Cloudflare Workers]
-        RENDER[Render App]
-    end
-
-    FE --> CF
-    FE --> RENDER
-```
+<a href="#-Conceptual system architecture">
+  <img src="assets/system-archi.png" alt="Conceptual system architecture" width="1000" />
+</a>
 
 
 ### Application lifecycle (state diagram)
