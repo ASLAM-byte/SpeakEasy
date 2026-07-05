@@ -384,99 +384,6 @@ flowchart TD
 
 ***
 
-## ⚙️ Installation \& Setup
-
-> SpeakEasy is a **Next.js app**; any modern Node.js environment works out of the box.
-
-### Requirements
-
-- Node.js **18+**
-- pnpm / npm / yarn
-- Git
-
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/speakeasy.git
-cd speakeasy
-```
-
-
-### 2. Install dependencies
-
-```bash
-# using pnpm
-pnpm install
-
-# or npm
-npm install
-
-# or yarn
-yarn install
-```
-
-
-### 3. Configure environment variables
-
-Create a `.env.local` file at the project root:
-
-```bash
-touch .env.local
-```
-
-Add relevant variables (see [Environment Variables](#-environment-variables)).
-
-### 4. Run locally (development)
-
-```bash
-pnpm dev
-# or
-npm run dev
-# or
-yarn dev
-```
-
-The app should be available at `http://localhost:3000`.
-
-### 5. Build for production
-
-```bash
-pnpm build
-pnpm start
-```
-
-> ⚠️ **Note:** In edge deployments (Cloudflare Workers), use the appropriate adapter or deployment command (`wrangler publish`, etc.).[^1]
-
-***
-
-## 🔐 Environment Variables
-
-> The core app primarily uses **static data and client-side persistence**, so environment variables are optional and relate to **analytics, APIs, or external services**.
-
-
-| Variable | Purpose | Example | Required |
-| :-- | :-- | :-- | :-- |
-| `NEXT_PUBLIC_APP_NAME` | Branding in metadata and UI | `SpeakEasy` | No |
-| `NEXT_PUBLIC_ANALYTICS_ID` | Client-side analytics tool ID | `G-XXXXXXX` | No |
-| `SPEECH_ANALYSIS_API_KEY` | Key for external speech/AI services | `sk-...` | Optional (if using 3rd-party APIs) |
-| `NEXT_PUBLIC_DEPLOY_ENV` | Environment label | `production` / `staging` | No |
-| `NEXT_PUBLIC_SUPPORT_EMAIL` | Contact email surfaced in UI | `support@speakeasy.app` | No |
-
-> ℹ️ **Info:** If your current implementation does not use external APIs, you can start with an empty `.env.local` and add variables as you integrate new services.
-
-***
-
-## 🔧 Configuration
-
-Key configuration points:
-
-- **Design tokens:** Driven by `constants/index.ts` and Tailwind theme overrides.[^1]
-- **Topics \& content:** Controlled via `data/topics.ts`, `data/vocabulary.ts`, and `data/interviewQuestions.ts`.[^1]
-- **Frameworks \& sample answers:** Configured in `data/frameworks.ts` and `data/sampleAnswers.ts`.[^1]
-- **Persistence:** Implemented via `store/appStore.ts` (Zustand + localStorage).[^1]
-
-> 💡 **Tip:** Treat `data/` as your **curriculum** – you can localize, expand topics, and adjust difficulty without touching core UI logic.[^1]
 
 ***
 
@@ -645,48 +552,6 @@ Even for a primarily client-side application:
 
 ***
 
-## 🌍 Deployment Guides
-
-> SpeakEasy can be deployed to **Render, Vercel, Netlify, Cloudflare Workers, Railway, Fly.io**, or any modern Node/edge platform.[^1]
-
-### Render
-
-1. Create a **Web Service** on Render.
-2. Connect the GitHub repository.
-3. Set build command: `pnpm build` and start command: `pnpm start`.
-4. Configure environment variables via the dashboard.
-5. Deploy – your URL will resemble `https://speakeasy-xyz.onrender.com/` (like the provided demo).
-
-### Vercel / Netlify
-
-- Import the repository.
-- Use default Next.js build settings.
-- Set environment variables in project settings.
-- Configure `production` branch and preview deployments.
-
-
-### Cloudflare Workers
-
-- Use a Next.js adapter / build pipeline compatible with Workers.
-- Configure `wrangler.toml` with routes, environment, and bindings.[^1]
-- Run `wrangler deploy` to publish.
-
-
-### Docker (Optional)
-
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-
-***
 
 ## 📅 Project Roadmap
 
@@ -886,7 +751,7 @@ Unauthorized copying, modification, or redistribution of the source code is **no
 
 - Inspiration from **slot-machine UI patterns** and editorial-style web experiences.[^1]
 - Open-source libraries: Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Zustand, Lucide React, canvas-confetti, and others in your dependency tree.[^1]
-- Communication frameworks: STAR, PREP, PPF and classic interview preparation literature.[^1]
+- Communication frameworks: STAR, PREP, PPF and classic interview preparation literature.
 
 ***
 
